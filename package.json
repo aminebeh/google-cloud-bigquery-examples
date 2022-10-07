@@ -1,0 +1,36 @@
+{
+  "name": "google-cloud-bigquery-examples",
+  "version": "1.0.0",
+  "description": "A repo to test, report issues and add features to @google-cloud/bigquery client library for nodejs",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node ./dist/main.js",
+    "create-job": "ts-node ./src/test-load-job-creation.ts",
+    "list-jobs": "node --experimental-specifier-resolution=node --loader ts-node/esm ./src/list-jobs.ts --project tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aminebeh/google-cloud-bigquery-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aminebeh/google-cloud-bigquery-examples/issues"
+  },
+  "homepage": "https://github.com/aminebeh/google-cloud-bigquery-examples#readme",
+  "dependencies": {
+    "@google-cloud/bigquery": "^6.0.0",
+    "p-wait-for": "^5.0.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.8.3",
+    "dotenv": "^16.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}
